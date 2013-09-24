@@ -4,20 +4,26 @@ library(shiny)
 shinyUI(pageWithSidebar(
   
   # Application title
-  headerPanel("Population Genetics Models: Mutation"),
+  headerPanel("Population Genetics Models: Migration"),
   
   sidebarPanel(
-    # mutation rate A->a
-    sliderInput("mu", "Mutation rate, μ:", min=0, max=0.001, value=0.0001, step=1*10^-5),
+    # Descriptive text
+    p("Use the sliders below to explore the effects of changing parameters associated with migration on the evolution of an island population."),
     
-    # mutation rate a->A
-    sliderInput("nu", "Mutation rate, ν:", min=0, max=0.001, value=0.00001, step=1*10^-5),
+    # equation
+    p(img(src="equation.png")),
     
-    # starting A allele frequency
-    sliderInput("p0", "Initial allele frequency, p_0:", min=0, max=1, value=0.90, step=0.01),
+    # migration rate
+    sliderInput("m", "Migration rate, m:", min=0, max=1.0, value=0.05, step=0.001),
+        
+    # starting A allele frequency on continent (mainland)
+    sliderInput("pc", "Allele frequency on continent, p_C:", min=0, max=1, value=0.90, step=0.01),
+    
+    # starting A allele frequency on island
+    sliderInput("p0", "Initial allele frequency on island, p_I_0:", min=0, max=1, value=0.10, step=0.01),
     
     # generation time
-    sliderInput("tmax", "Number of generations:", min=1, max=50000, value=10000, step=100)
+    sliderInput("tmax", "Number of generations:", min=1, max=1000, value=100, step=1)
   ),
   
   mainPanel(

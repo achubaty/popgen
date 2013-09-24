@@ -7,6 +7,12 @@ shinyUI(pageWithSidebar(
   headerPanel("Population Genetics Models: Mutation"),
   
   sidebarPanel(
+    # Descriptive text
+    p("Use the sliders below to explore the effects of changing parameters associated with mutatian on the evolution of a population."),
+    
+    # equation
+    p(img(src="equation.png")),
+    
     # mutation rate A->a
     sliderInput("mu", "Mutation rate, μ:", min=0, max=0.001, value=0.0001, step=1*10^-5),
     
