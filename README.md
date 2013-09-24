@@ -15,7 +15,7 @@ To run the mutation app, open Rstudio and run:
 
 ```
 library(shiny)
-runApp("~/Dropbox/models_shiny/popgen/mutation")
+runApp("~/pathto/popgen/mutation")
 ```
 
 ### migration
@@ -24,6 +24,6 @@ To run the migration app, open Rstudio and run:
 
 ```
 library(shiny)
-runApp("~/Dropbox/models_shiny/popgen/migration")
+runApp("~/pathto/popgen/migration")
 ```
 
