@@ -27,3 +27,12 @@ library(shiny)
 runApp("~/pathto/popgen/migration")
 ```
 
+### selection
+
+To run the selection app, open Rstudio and run:
+
+```
+library(shiny)
+runApp("~/pathto/popgen/selection")
+```
+
