@@ -7,6 +7,9 @@ shinyUI(pageWithSidebar(
   headerPanel("Population Genetics Models: Mutation"),
   
   sidebarPanel(
+    # navigation
+    p(a("HOME", href="../index.html")),
+    
     # Descriptive text
     p("Use the sliders below to explore the effects of changing parameters associated with mutatian on the evolution of a population."),
     
