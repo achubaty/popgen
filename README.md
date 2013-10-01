@@ -9,6 +9,15 @@ install.packages("shiny")
 
 ```
 
+### drift
+
+To run the mutation app, open Rstudio and run:
+
+```
+library(shiny)
+runApp("~/pathto/popgen/drift")
+```
+
 ### mutation
 
 To run the mutation app, open Rstudio and run:
