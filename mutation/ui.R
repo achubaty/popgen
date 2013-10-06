@@ -11,7 +11,7 @@ shinyUI(pageWithSidebar(
     p(a("HOME", href="../index.html")),
     
     # Descriptive text
-    p("Use the sliders below to explore the effects of changing parameters associated with mutatian on the evolution of a population."),
+    p("Use the sliders below to explore the effects of changing parameters associated with mutation on the evolution of a population."),
     
     # equation
     p(img(src="equation.png")),
