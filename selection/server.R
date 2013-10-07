@@ -8,7 +8,11 @@ shinyServer(function(input, output) {
     p[1] <- p0
   
     for (t in 1:(tmax-1)) {
-      p[t+1] <- ( wAA*p[t]^2 + wAa*p[t]*(1-p[t]) ) / ( wAA*p[t]^2 + wAa*2*p[t]*(1-p[t]) + waa*(1-p[t])^2 )
+      if (( wAA*p[t]^2 + wAa*2*p[t]*(1-p[t]) + waa*(1-p[t])^2 ) > 0) {
+        p[t+1] <- ( wAA*p[t]^2 + wAa*p[t]*(1-p[t]) ) / ( wAA*p[t]^2 + wAa*2*p[t]*(1-p[t]) + waa*(1-p[t])^2 )
+      } else {
+        p[t+1] <- NA
+      }
     }
     
     return(p)
