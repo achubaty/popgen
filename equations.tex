@@ -35,6 +35,7 @@ Here we describe a biallelic system where selection acts on each genotype based 
 	p' = \frac{w_{AA} p^2 + w_{Aa} p (1-p)}{w_{AA} p^2 + w_{Aa} 2 p (1-p) + w_{aa} (1-p)^2}
 \end{equation}
 
+
 \section{Combining Mutation, Migration, and Selection Models}
 \paragraph()
 Here we describe a biallelic system where $A$ mutates to $a$ at some frequency $\mu$, and $a$ mutates to $A$ at frequency $\nu$, individuals move from a continent (mainland), with an allele frequency of $p_C$, to an island at a net migration rate of $m$. The allele frequency on the island $p_I$, and selection acts on each genotype based on the value of the relative fitness of each genotype ($w_{AA}$, $w_{Aa}$, $w_{aa}$).
@@ -47,4 +48,19 @@ Here we describe a biallelic system where $A$ mutates to $a$ at some frequency $
 	\end{aligned}
 \end{equation}
 
+
+
+\section{Inbreeding}
+\paragraph()
+Here we describe a biallelic system where inbreeding takes place.
+
+\begin{equation}
+	\begin{aligned}
+		f(AA) &= p^2 (1-F) + p F\\
+		f(Aa) &= 2 p (1-p) (1-F)\\
+		f(aa) &= (1-p)^2 (1-F) + q F
+	\end{aligned}
+\end{equation}
+
 \end{document}
+
